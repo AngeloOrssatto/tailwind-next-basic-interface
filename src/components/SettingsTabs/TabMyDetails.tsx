@@ -14,6 +14,7 @@ import * as FileInput from "@/components/Form/FileInput";
 import { Select } from "@/components/Form/Select";
 import { SelectItem } from "../Form/Select/SelectItem";
 import { TextArea } from "../Form/TextArea";
+import { Button } from "../Button";
 
 export function TabMyDetails() {
   return (
@@ -26,19 +27,12 @@ export function TabMyDetails() {
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            className="border border-zinc-300 text-zinc-700 hover:bg-zinc-50 rounded-lg text-sm font-semibold shadow-sm py-2 px-4"
-          >
+          <Button type="button" variant="outline">
             Cancel
-          </button>
-          <button
-            type="submit"
-            className="bg-violet-600 text-zinc-50 hover:bg-violet-700 rounded-lg text-sm font-semibold shadow-sm py-2 px-4"
-            form="settings"
-          >
+          </Button>
+          <Button type="submit" form="settings">
             Save
-          </button>
+          </Button>
         </div>
       </div>
       <form
@@ -147,39 +141,24 @@ export function TabMyDetails() {
                 <SelectItem value="md" text="MarkDown" />
               </Select>
               <div className="flex items-center gap-1">
-                <button
-                  type="button"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
+                <Button type="button" variant="ghost">
                   <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
-                  type="button"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
+                </Button>
+                <Button type="button" variant="ghost">
                   <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
-                  type="button"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
+                </Button>
+                <Button type="button" variant="ghost">
                   <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
-                  type="button"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
+                </Button>
+                <Button type="button" variant="ghost">
                   <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                </button>
-                <button
-                  type="button"
-                  className="rounded-md p-2 hover:bg-zinc-50"
-                >
+                </Button>
+                <Button type="button" variant="ghost">
                   <ListOrdered
                     className="h-4 w-4 text-zinc-500"
                     strokeWidth={3}
                   />
-                </button>
+                </Button>
               </div>
             </div>
             <TextArea id="bio" defaultValue="Type your bio here" />
@@ -204,18 +183,12 @@ export function TabMyDetails() {
         </div>
 
         <div className="flex items-center justify-end pt-5 gap-2">
-          <button
-            type="button"
-            className="border border-zinc-300 text-zinc-700 hover:bg-zinc-50 rounded-lg text-sm font-semibold shadow-sm py-2 px-4"
-          >
+          <Button type="button" variant="outline">
             Cancel
-          </button>
-          <button
-            type="submit"
-            className="bg-violet-600 text-zinc-50 hover:bg-violet-700 rounded-lg text-sm font-semibold shadow-sm py-2 px-4"
-          >
+          </Button>
+          <Button type="submit" form="settings">
             Save
-          </button>
+          </Button>
         </div>
       </form>
     </div>
