@@ -19,7 +19,7 @@ import { Button } from "../Button";
 export function TabMyDetails() {
   return (
     <div className="mt-6 flex flex-col">
-      <div className="flex items-center justify-between border-b border-zinc-200 pb-5">
+      <div className="flex flex-col lg:flex-row lg:items-center gap-4 justify-between border-b border-zinc-200 pb-5">
         <div className="space-y-1">
           <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
           <span className="text-sm text-zinc-500">
@@ -39,23 +39,32 @@ export function TabMyDetails() {
         id="settings"
         className="mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200"
       >
-        <div className="grid gap-3 grid-cols-form">
+        <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form">
           <label
             htmlFor="firstName"
             className="text-sm font-medium text-zinc-700"
           >
             Name
           </label>
-          <div className="grid gap-6 grid-cols-2">
+          <div className="flex flex-col lg:grid gap-6 lg:grid-cols-2">
             <Input.Root>
               <Input.Control id="firstName" defaultValue="Name" />
             </Input.Root>
-            <Input.Root>
-              <Input.Control defaultValue="Last Name" />
-            </Input.Root>
+            <div className="flex flex-col gap-3 lg:block">
+              <label
+                htmlFor="lastName"
+                className="text-sm font-medium text-zinc-700 lg:sr-only"
+              >
+                Last Name
+              </label>
+              <Input.Root>
+                <Input.Control id="lastName" defaultValue="Last Name" />
+              </Input.Root>
+            </div>
           </div>
         </div>
-        <div className="grid gap-3 grid-cols-form pt-5">
+
+        <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="email" className="text-sm font-medium text-zinc-700">
             Email address
           </label>
@@ -70,7 +79,7 @@ export function TabMyDetails() {
             />
           </Input.Root>
         </div>
-        <div className="grid gap-3 grid-cols-form pt-5">
+        <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="photo" className="text-sm font-medium text-zinc-700">
             Your photo
             <span className="mt-0.5 block text-sm font-normal text-zinc-500">
@@ -78,14 +87,14 @@ export function TabMyDetails() {
             </span>
           </label>
 
-          <FileInput.Root className="flex items-start gap-5">
+          <FileInput.Root className="flex flex-col lg:flex-row lg:items-start gap-5">
             <FileInput.ImagePreview />
             <FileInput.Trigger />
             <FileInput.Control />
           </FileInput.Root>
         </div>
 
-        <div className="grid gap-3 grid-cols-form pt-5">
+        <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="role" className="text-sm font-medium text-zinc-700">
             Role
           </label>
@@ -94,7 +103,7 @@ export function TabMyDetails() {
           </Input.Root>
         </div>
 
-        <div className="grid gap-3 grid-cols-form pt-5">
+        <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label
             htmlFor="country"
             className="text-sm font-medium text-zinc-700"
@@ -108,7 +117,7 @@ export function TabMyDetails() {
           </Select>
         </div>
 
-        <div className="grid gap-3 grid-cols-form pt-5">
+        <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label
             htmlFor="timezone"
             className="text-sm font-medium text-zinc-700"
@@ -127,7 +136,7 @@ export function TabMyDetails() {
           </Select>
         </div>
 
-        <div className="grid gap-3 grid-cols-form pt-5">
+        <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
             Bio
             <span className="mt-0.5 block text-sm font-normal text-zinc-500">
@@ -135,7 +144,7 @@ export function TabMyDetails() {
             </span>
           </label>
           <div className="space-y-3">
-            <div className="grid gap-3 grid-cols-2">
+            <div className="flex flex-col lg:grid gap-3 lg:grid-cols-2">
               <Select placeholder="" defaultValue="normal">
                 <SelectItem value="normal" text="Normal Text" />
                 <SelectItem value="md" text="MarkDown" />
@@ -165,7 +174,7 @@ export function TabMyDetails() {
           </div>
         </div>
 
-        <div className="grid gap-3 grid-cols-form pt-5">
+        <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form pt-5">
           <label
             htmlFor="portifolioProjects"
             className="text-sm font-medium text-zinc-700"

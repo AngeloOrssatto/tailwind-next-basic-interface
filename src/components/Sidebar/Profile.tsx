@@ -12,7 +12,7 @@ export function Profile() {
       <div className="flex flex-col truncate">
         <span className="text-sm font-semibold text-zinc-700">Username</span>
         <span className="text-sm text-zinc-500 truncate">
-          username@email.comusername@email.comusername@email.comusername@email.com
+          username@email.com
         </span>
       </div>
       <Button type="button" variant="ghost">
